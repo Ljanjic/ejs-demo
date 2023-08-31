@@ -34,7 +34,7 @@ const createTask = async (req, res) => {
     }
       res.redirect('/tasks');
     } catch (err) {
-      ReadableByteStreamController.locals.message = "Something went wrong.";
+      res.locals.message = "Something went wrong.";
       res.redirect('/tasks');
     }
   };
